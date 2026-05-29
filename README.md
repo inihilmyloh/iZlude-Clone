@@ -1,37 +1,60 @@
 <div align="center">
   <img src="app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" alt="iZludeClone Logo" width="120" />
-  <h1>iZludeClone (Virtual Engine App Cloner)</h1>
-  <p>Aplikasi Kloning (App Cloner) Modern menggunakan teknologi <b>Virtual OS / I/O Redirect</b> (tanpa akses Root) khusus untuk perangkat Android Modern.</p>
+  <h1>iZludeClone</h1>
+  <p><b>Advanced Android App Virtualization & Cloning Engine</b></p>
+  <p>Run multiple accounts simultaneously in an isolated sandbox environment without root or work profile restrictions.</p>
 </div>
 
 ---
 
-## 🌟 Fitur Utama
-- **Isolasi Penuh (Sandbox)**: Aplikasi yang dikloning berjalan dalam ruang memori yang benar-benar terpisah dari sistem utama, berkat Virtual Engine BlackBox.
-- **Data & Akun Terpisah**: Memungkinkan Anda untuk login ke dua akun (WhatsApp, Instagram, Game) yang berbeda secara bersamaan tanpa saling mengganggu.
-- **Tanpa Root & Tanpa Work Profile**: Mengakali sistem vendor ketat (seperti ColorOS/MIUI) dengan virtualisasi murni, sehingga tidak memerlukan izin *Device Admin* atau *Work Profile* yang berisiko.
-- **Material UI Design**: Antarmuka modern yang bersih, dilengkapi *Shimmer Loading* dan animasi transisi yang mulus.
+## 🌟 Overview
 
-## 🛠 Teknologi yang Digunakan
-- **Bahasa**: Kotlin (100%)
-- **Arsitektur**: Modern Android Architecture
-- **Virtualisasi**: [BlackBox](https://github.com/FBlackBox/BlackBox) (Engine Inti)
-- **Desain UI**: Material Components, ViewPager2, Shimmer Effect
+**iZludeClone** is a modern Android application that leverages **Virtual OS / I/O Redirect** technology to clone and run applications in a completely isolated sandbox environment. Unlike traditional cloning methods that rely on the Android Work Profile (which are often heavily restricted by device manufacturers like OPPO, Vivo, or Xiaomi), iZludeClone intercepts filesystem and system calls to create a self-contained virtual environment entirely within its own application directory.
+
+## 🚀 Key Features
+
+*   **🛡️ True Virtualization (Sandbox)**
+    Cloned applications run in a completely isolated memory space. The Virtual Engine intercepts system calls and redirects storage paths (I/O hook) so that the cloned app operates independently of the host system.
+*   **👥 Independent Data & Accounts**
+    Seamlessly log into multiple accounts (e.g., WhatsApp, Instagram, Games) at the same time. The cloned application's data is safely stored inside iZludeClone's hidden directory, preventing any conflict with the original app.
+*   **🔓 No Root or Work Profile Required**
+    Bypass strict vendor OS limitations (such as ColorOS, MIUI, FuntouchOS). By utilizing pure application-level virtualization, iZludeClone does not require `Device Admin` privileges or dangerous Root permissions.
+*   **✨ Modern Material UI**
+    A sleek, responsive user interface built with Kotlin, featuring Material Components, ViewPager2, and Shimmer Loading effects for a premium user experience.
+
+## 🛠️ Technology Stack
+
+*   **Language**: Kotlin (100%)
+*   **Architecture**: Modern Android Architecture
+*   **Core Virtualization Engine**: BlackBox Framework (`Bcore-release.aar`)
+*   **UI Components**: Material Design, Shimmer Effect
+
+## 🚀 How to Build & Run
+
+1.  **Clone the Repository**
+    ```bash
+    git clone https://github.com/inihilmyloh/Ice-Clone.git
+    ```
+2.  **Open in Android Studio**
+    Open the project using the latest version of Android Studio.
+3.  **Sync Gradle**
+    Ensure that Gradle syncs successfully. The virtualization engine (`Bcore-release.aar`) is already integrated directly into the `app/libs` directory.
+4.  **Run the Application**
+    Deploy the app to your emulator or physical Android device.
 
 ---
 
-## 💖 Ucapan Terima Kasih (Credits)
-iZludeClone tidak akan terwujud tanpa dedikasi komunitas *Open-Source*, khususnya bagi pengembangan mesin virtual Android (Virtual Engine).
+## 💖 Credits & Acknowledgments
 
-Penghargaan tertinggi dan kredit khusus diberikan kepada:
-*   **[ALEX5402/NewBlackbox](https://github.com/ALEX5402/NewBlackbox)**: Untuk *fork* dan perbaikan luar biasa pada *engine* BlackBox sehingga kompatibel dengan versi Android terbaru (Android 12-14), serta menyediakan `Bcore-release.aar` yang siap pakai.
-*   **[FBlackBox/BlackBox](https://github.com/FBlackBox/BlackBox)**: Proyek mesin virtual orisinal yang menjadi tulang punggung dari aplikasi ini.
+iZludeClone would not be possible without the incredible dedication of the open-source community, particularly the developers pioneering Android Virtual Engines.
 
-## 📝 Lisensi
-Proyek ini mengadopsi struktur *Virtual Engine* dari proyek BlackBox asli. Silakan merujuk pada lisensi perangkat lunak terbuka (Apache License 2.0 / GPL) dari *repository* BlackBox untuk penggunaan ulang mesin kloning.
+Special thanks and highest credits go to:
 
-## 🚀 Cara Menjalankan (Build)
-1. *Clone* repository ini ke komputer Anda.
-2. Buka proyek ini menggunakan **Android Studio**.
-3. Pastikan Gradle melakukan sinkronisasi dengan sukses (diperlukan `Bcore-release.aar` di dalam folder `app/libs`).
-4. Jalankan aplikasi (Run `app`) ke emulator atau perangkat Android fisik Anda.
+*   🏆 **[ALEX5402 / NewBlackbox](https://github.com/ALEX5402/NewBlackbox)**
+    For their outstanding work in forking, maintaining, and fixing the BlackBox engine to ensure compatibility with modern Android versions (Android 12-14), and for providing the pre-compiled `Bcore-release.aar` that powers this app.
+*   🏆 **[FBlackBox / BlackBox](https://github.com/FBlackBox/BlackBox)**
+    For creating the original, groundbreaking open-source virtual engine architecture that serves as the foundation for this project.
+
+## 📝 License
+
+This project adopts the Virtual Engine architecture from the original BlackBox project. Please refer to the open-source licenses (Apache License 2.0 / GPL) from the BlackBox repository regarding the reuse of the cloning engine.
