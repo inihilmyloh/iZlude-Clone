@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.dualspace.clone"
+    namespace = "com.izlude.clone"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.dualspace.clone"
+        applicationId = "com.izlude.clone"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -64,4 +64,7 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+
+    // BlackBox Engine
+    implementation(files("libs/Bcore-release.aar"))
 }

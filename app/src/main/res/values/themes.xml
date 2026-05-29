@@ -59,7 +59,7 @@
     </style>
 
     <!-- Search Bar Style -->
-    <style name="Widget.DualSpace.SearchBar">
+    <style name="Widget.DualSpace.SearchBar" parent="">
         <item name="android:background">@drawable/bg_search_bar</item>
         <item name="android:textColor">@color/on_surface</item>
         <item name="android:textColorHint">@color/on_surface_variant</item>
@@ -71,7 +71,7 @@
     </style>
 
     <!-- Section Title -->
-    <style name="TextAppearance.DualSpace.Title">
+    <style name="TextAppearance.DualSpace.Title" parent="">
         <item name="android:textSize">22sp</item>
         <item name="android:textColor">@color/on_background</item>
         <item name="android:fontFamily">sans-serif-bold</item>
@@ -79,14 +79,14 @@
     </style>
 
     <!-- Section Subtitle -->
-    <style name="TextAppearance.DualSpace.Subtitle">
+    <style name="TextAppearance.DualSpace.Subtitle" parent="">
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/on_surface_variant</item>
         <item name="android:fontFamily">sans-serif</item>
     </style>
 
     <!-- App Name in List -->
-    <style name="TextAppearance.DualSpace.AppName">
+    <style name="TextAppearance.DualSpace.AppName" parent="">
         <item name="android:textSize">15sp</item>
         <item name="android:textColor">@color/on_background</item>
         <item name="android:fontFamily">sans-serif-medium</item>
@@ -95,7 +95,7 @@
     </style>
 
     <!-- App Package Name -->
-    <style name="TextAppearance.DualSpace.PackageName">
+    <style name="TextAppearance.DualSpace.PackageName" parent="">
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">@color/on_surface_variant</item>
         <item name="android:fontFamily">sans-serif</item>

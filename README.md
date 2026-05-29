@@ -1,98 +1,37 @@
-# DualSpace - Android App Cloner
+<div align="center">
+  <img src="app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" alt="iZludeClone Logo" width="120" />
+  <h1>iZludeClone (Virtual Engine App Cloner)</h1>
+  <p>Aplikasi Kloning (App Cloner) Modern menggunakan teknologi <b>Virtual OS / I/O Redirect</b> (tanpa akses Root) khusus untuk perangkat Android Modern.</p>
+</div>
 
-Aplikasi Android untuk mengkloning/menduplikasi aplikasi lain (seperti Dual Space).
+---
 
-## Fitur
+## 🌟 Fitur Utama
+- **Isolasi Penuh (Sandbox)**: Aplikasi yang dikloning berjalan dalam ruang memori yang benar-benar terpisah dari sistem utama, berkat Virtual Engine BlackBox.
+- **Data & Akun Terpisah**: Memungkinkan Anda untuk login ke dua akun (WhatsApp, Instagram, Game) yang berbeda secara bersamaan tanpa saling mengganggu.
+- **Tanpa Root & Tanpa Work Profile**: Mengakali sistem vendor ketat (seperti ColorOS/MIUI) dengan virtualisasi murni, sehingga tidak memerlukan izin *Device Admin* atau *Work Profile* yang berisiko.
+- **Material UI Design**: Antarmuka modern yang bersih, dilengkapi *Shimmer Loading* dan animasi transisi yang mulus.
 
-- 🔄 **Kloning Aplikasi** - Duplikasi aplikasi yang terinstall untuk menjalankan dua akun sekaligus
-- 🔍 **Pencarian** - Cari aplikasi yang ingin dikloning dengan mudah
-- 📱 **Manajemen Kloning** - Buka dan hapus kloning dengan mudah
-- 🎨 **UI Modern** - Desain dark mode dengan animasi smooth
-- 🔒 **Work Profile** - Menggunakan Android Work Profile untuk isolasi aplikasi
+## 🛠 Teknologi yang Digunakan
+- **Bahasa**: Kotlin (100%)
+- **Arsitektur**: Modern Android Architecture
+- **Virtualisasi**: [BlackBox](https://github.com/FBlackBox/BlackBox) (Engine Inti)
+- **Desain UI**: Material Components, ViewPager2, Shimmer Effect
 
-## Teknologi
+---
 
-- **Bahasa**: Kotlin
-- **Min SDK**: 24 (Android 7.0)
-- **Target SDK**: 34 (Android 14)
-- **UI**: Material Design 3
-- **Arsitektur**: MVVM Pattern
+## 💖 Ucapan Terima Kasih (Credits)
+iZludeClone tidak akan terwujud tanpa dedikasi komunitas *Open-Source*, khususnya bagi pengembangan mesin virtual Android (Virtual Engine).
 
-## Cara Kerja
+Penghargaan tertinggi dan kredit khusus diberikan kepada:
+*   **[ALEX5402/NewBlackbox](https://github.com/ALEX5402/NewBlackbox)**: Untuk *fork* dan perbaikan luar biasa pada *engine* BlackBox sehingga kompatibel dengan versi Android terbaru (Android 12-14), serta menyediakan `Bcore-release.aar` yang siap pakai.
+*   **[FBlackBox/BlackBox](https://github.com/FBlackBox/BlackBox)**: Proyek mesin virtual orisinal yang menjadi tulang punggung dari aplikasi ini.
 
-DualSpace menggunakan fitur **Android Managed Profile (Work Profile)** untuk membuat profil terpisah di perangkat. Pendekatan ini sama dengan yang digunakan oleh aplikasi seperti:
-- **Shelter** (Open Source)
-- **Island** by Oasis Feng
+## 📝 Lisensi
+Proyek ini mengadopsi struktur *Virtual Engine* dari proyek BlackBox asli. Silakan merujuk pada lisensi perangkat lunak terbuka (Apache License 2.0 / GPL) dari *repository* BlackBox untuk penggunaan ulang mesin kloning.
 
-### Alur Kerja:
-1. Setup Work Profile (profil kerja) di perangkat
-2. Pilih aplikasi yang ingin dikloning
-3. Aplikasi di-install di Work Profile
-4. Jalankan dua instance dari aplikasi yang sama
-
-## Build & Run
-
-### Prasyarat
-- Android Studio Arctic Fox atau lebih baru
-- JDK 8+
-- Android SDK 34
-
-### Langkah Build
-```bash
-# Clone repository
-git clone <repo-url>
-
-# Buka di Android Studio
-# Atau build via command line:
-./gradlew assembleDebug
-```
-
-### Install ke device
-```bash
-./gradlew installDebug
-```
-
-## Struktur Proyek
-
-```
-app/src/main/
-├── java/com/dualspace/clone/
-│   ├── DualSpaceApp.kt          # Application class
-│   ├── MainActivity.kt           # Splash screen
-│   ├── core/
-│   │   └── CloneManager.kt       # Core cloning logic
-│   ├── model/
-│   │   ├── AppInfo.kt            # App data model
-│   │   └── ClonedApp.kt          # Cloned app model
-│   ├── receiver/
-│   │   └── DualSpaceDeviceAdminReceiver.kt
-│   ├── service/
-│   │   └── CloneService.kt       # Foreground service
-│   ├── ui/
-│   │   ├── HomeActivity.kt       # Main screen
-│   │   ├── ClonedAppsFragment.kt  # Cloned apps list
-│   │   ├── AppPickerFragment.kt   # App selection
-│   │   ├── AppPickerActivity.kt   # Standalone picker
-│   │   └── adapter/
-│   │       ├── AppListAdapter.kt
-│   │       └── ClonedAppAdapter.kt
-│   └── util/
-│       ├── AppUtils.kt           # App loading utilities
-│       └── CloneStorage.kt       # Local storage
-└── res/
-    ├── layout/                    # XML layouts
-    ├── drawable/                   # Icons & backgrounds
-    ├── values/                     # Strings, colors, themes
-    └── xml/                        # Device admin config
-```
-
-## Catatan Penting
-
-⚠️ **Limitasi**:
-- Beberapa perangkat mungkin tidak mendukung Work Profile
-- Membutuhkan izin Device Admin untuk fitur penuh
-- Aplikasi sistem tidak dapat dikloning
-
-## Lisensi
-
-MIT License
+## 🚀 Cara Menjalankan (Build)
+1. *Clone* repository ini ke komputer Anda.
+2. Buka proyek ini menggunakan **Android Studio**.
+3. Pastikan Gradle melakukan sinkronisasi dengan sukses (diperlukan `Bcore-release.aar` di dalam folder `app/libs`).
+4. Jalankan aplikasi (Run `app`) ke emulator atau perangkat Android fisik Anda.
