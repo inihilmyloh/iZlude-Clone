@@ -15,6 +15,14 @@ class DualSpaceApp : Application() {
 
         lateinit var instance: DualSpaceApp
             private set
+
+        fun writeCrash(context: Context?, e: Throwable) {
+            try {
+                val file = java.io.File(context?.getExternalFilesDir(null), "crash.txt")
+                file.appendText("\n\n" + android.util.Log.getStackTraceString(e))
+            } catch (ex: Exception) {
+            }
+        }
     }
 
     override fun attachBaseContext(base: Context) {
@@ -24,13 +32,13 @@ class DualSpaceApp : Application() {
         try {
             top.niunaijun.blackbox.BlackBoxCore.get().closeCodeInit()
         } catch (e: Exception) {
-            e.printStackTrace()
+            writeCrash(base, e)
         }
 
         try {
             top.niunaijun.blackbox.BlackBoxCore.get().onBeforeMainApplicationAttach(this, base)
         } catch (e: Exception) {
-            e.printStackTrace()
+            writeCrash(base, e)
         }
 
         try {
@@ -44,13 +52,13 @@ class DualSpaceApp : Application() {
                 override fun requestInstallPackage(file: java.io.File?, userId: Int): Boolean = false
             })
         } catch (e: Exception) {
-            e.printStackTrace()
+            writeCrash(base, e)
         }
 
         try {
             top.niunaijun.blackbox.BlackBoxCore.get().onAfterMainApplicationAttach(this, base)
         } catch (e: Exception) {
-            e.printStackTrace()
+            writeCrash(base, e)
         }
     }
 
@@ -59,7 +67,7 @@ class DualSpaceApp : Application() {
         try {
             top.niunaijun.blackbox.BlackBoxCore.get().doCreate()
         } catch (e: Exception) {
-            e.printStackTrace()
+            writeCrash(this, e)
         }
         createNotificationChannel()
     }
