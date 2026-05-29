@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@drawable/ripple_card"
+    android:padding="14dp"
+    android:layout_marginBottom="8dp">
+
+    <!-- App Icon with Clone Badge -->
+    <FrameLayout
+        android:layout_width="@dimen/app_icon_size"
+        android:layout_height="@dimen/app_icon_size">
+
+        <ImageView
+            android:id="@+id/ivAppIcon"
+            android:layout_width="@dimen/app_icon_size"
+            android:layout_height="@dimen/app_icon_size"
+            android:contentDescription="App Icon"
+            android:scaleType="centerCrop" />
+
+        <!-- Clone Badge -->
+        <FrameLayout
+            android:id="@+id/cloneBadge"
+            android:layout_width="@dimen/clone_badge_size"
+            android:layout_height="@dimen/clone_badge_size"
+            android:layout_gravity="bottom|end"
+            android:background="@drawable/bg_clone_badge"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_check"
+                android:contentDescription="Cloned" />
+        </FrameLayout>
+    </FrameLayout>
+
+    <!-- App Info -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="12dp">
+
+        <TextView
+            android:id="@+id/tvAppName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.DualSpace.AppName"
+            android:text="App Name" />
+
+        <TextView
+            android:id="@+id/tvAppPackage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            style="@style/TextAppearance.DualSpace.PackageName"
+            android:text="com.example.app" />
+
+        <TextView
+            android:id="@+id/tvAppSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textSize="11sp"
+            android:textColor="@color/on_surface_variant"
+            android:text="--" />
+
+    </LinearLayout>
+
+    <!-- Action Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAction"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        style="@style/Widget.DualSpace.Button.Clone"
+        android:text="@string/clone_app"
+        android:textSize="12sp"
+        android:minWidth="80dp" />
+
+</LinearLayout>

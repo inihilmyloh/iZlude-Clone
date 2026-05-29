@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Brand Colors -->
+    <color name="primary">#6C63FF</color>
+    <color name="primary_dark">#5A52E0</color>
+    <color name="primary_light">#8B85FF</color>
+    <color name="primary_variant">#3F3D99</color>
+    <color name="on_primary">#FFFFFF</color>
+
+    <!-- Secondary / Accent Colors -->
+    <color name="secondary">#00D4AA</color>
+    <color name="secondary_dark">#00B894</color>
+    <color name="secondary_light">#55EFC4</color>
+    <color name="on_secondary">#FFFFFF</color>
+
+    <!-- Background & Surface (Dark Theme) -->
+    <color name="background_dark">#0D0D1A</color>
+    <color name="surface_dark">#1A1A2E</color>
+    <color name="surface_elevated">#252540</color>
+    <color name="surface_card">#1E1E35</color>
+    <color name="on_background">#E8E8F0</color>
+    <color name="on_surface">#CACAD8</color>
+    <color name="on_surface_variant">#8888A0</color>
+
+    <!-- Status Colors -->
+    <color name="success">#00D68F</color>
+    <color name="warning">#FFD93D</color>
+    <color name="error">#FF6B6B</color>
+    <color name="info">#54A0FF</color>
+
+    <!-- Gradient Colors -->
+    <color name="gradient_start">#6C63FF</color>
+    <color name="gradient_mid">#A855F7</color>
+    <color name="gradient_end">#EC4899</color>
+
+    <!-- Card Gradient -->
+    <color name="card_gradient_start">#1E1E35</color>
+    <color name="card_gradient_end">#2A2A45</color>
+
+    <!-- Shimmer -->
+    <color name="shimmer_base">#1A1A2E</color>
+    <color name="shimmer_highlight">#252540</color>
+
+    <!-- Overlay -->
+    <color name="overlay_dark">#80000000</color>
+    <color name="overlay_light">#40FFFFFF</color>
+
+    <!-- Badge -->
+    <color name="badge_clone">#6C63FF</color>
+    <color name="badge_running">#00D68F</color>
+
+    <!-- Divider -->
+    <color name="divider">#2A2A45</color>
+
+    <!-- Ripple -->
+    <color name="ripple_color">#406C63FF</color>
+
+    <!-- Transparent -->
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>

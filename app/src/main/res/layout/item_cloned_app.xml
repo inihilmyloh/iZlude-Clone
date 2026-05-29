@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@drawable/ripple_card"
+    android:padding="14dp"
+    android:layout_marginBottom="8dp">
+
+    <!-- App Icon -->
+    <FrameLayout
+        android:layout_width="@dimen/app_icon_size"
+        android:layout_height="@dimen/app_icon_size">
+
+        <ImageView
+            android:id="@+id/ivAppIcon"
+            android:layout_width="@dimen/app_icon_size"
+            android:layout_height="@dimen/app_icon_size"
+            android:contentDescription="App Icon"
+            android:scaleType="centerCrop" />
+
+        <!-- Running Badge -->
+        <View
+            android:id="@+id/runningBadge"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_gravity="bottom|end"
+            android:background="@drawable/bg_clone_badge"
+            android:backgroundTint="@color/badge_running" />
+    </FrameLayout>
+
+    <!-- App Info -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="12dp">
+
+        <TextView
+            android:id="@+id/tvAppName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.DualSpace.AppName"
+            android:text="App Name" />
+
+        <TextView
+            android:id="@+id/tvAppPackage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            style="@style/TextAppearance.DualSpace.PackageName"
+            android:text="com.example.app" />
+
+        <TextView
+            android:id="@+id/tvCloneStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Aktif"
+            android:textSize="11sp"
+            android:textColor="@color/success"
+            android:fontFamily="sans-serif-medium"
+            android:background="@drawable/bg_status_badge"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp" />
+
+    </LinearLayout>
+
+    <!-- Action Buttons -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnOpen"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            style="@style/Widget.DualSpace.Button.Open"
+            android:text="@string/open_clone"
+            android:textSize="12sp"
+            android:minWidth="64dp"
+            android:layout_marginEnd="6dp" />
+
+        <ImageButton
+            android:id="@+id/btnRemove"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_delete"
+            android:contentDescription="@string/remove_clone"
+            app:tint="@color/error" />
+
+    </LinearLayout>
+
+</LinearLayout>

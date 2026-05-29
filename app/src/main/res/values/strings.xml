@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DualSpace</string>
+    <string name="app_tagline">Jalankan Dua Akun Sekaligus</string>
+    <string name="tab_cloned">Aplikasi Kloning</string>
+    <string name="tab_add">Tambah Kloning</string>
+    <string name="search_hint">Cari aplikasi…</string>
+    <string name="clone_app">Kloning</string>
+    <string name="remove_clone">Hapus Kloning</string>
+    <string name="open_clone">Buka</string>
+    <string name="cloning_in_progress">Sedang mengkloning…</string>
+    <string name="clone_success">Aplikasi berhasil dikloning!</string>
+    <string name="clone_failed">Gagal mengkloning aplikasi</string>
+    <string name="no_cloned_apps">Belum ada aplikasi yang dikloning</string>
+    <string name="no_cloned_apps_desc">Tekan tombol + untuk menambahkan aplikasi yang ingin dikloning</string>
+    <string name="setup_work_profile">Setup Work Profile</string>
+    <string name="work_profile_desc">DualSpace membutuhkan Work Profile untuk mengkloning aplikasi. Ini akan membuat profil terpisah di perangkat Anda.</string>
+    <string name="setup_now">Setup Sekarang</string>
+    <string name="cancel">Batal</string>
+    <string name="confirm_remove">Konfirmasi Hapus</string>
+    <string name="confirm_remove_msg">Apakah Anda yakin ingin menghapus kloning %s?</string>
+    <string name="yes_remove">Ya, Hapus</string>
+    <string name="popular_apps">Aplikasi Populer</string>
+    <string name="all_apps">Semua Aplikasi</string>
+    <string name="loading_apps">Memuat daftar aplikasi…</string>
+    <string name="notification_channel_name">Clone Service</string>
+    <string name="notification_channel_desc">Notifikasi saat proses kloning berlangsung</string>
+    <string name="settings">Pengaturan</string>
+    <string name="about">Tentang</string>
+    <string name="version">Versi 1.0</string>
+</resources>
