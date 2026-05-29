@@ -33,7 +33,7 @@
 
 1.  **Clone the Repository**
     ```bash
-    git clone https://github.com/inihilmyloh/Ice-Clone.git
+    git clone https://github.com/inihilmyloh/iZlude-Clone.git
     ```
 2.  **Open in Android Studio**
     Open the project using the latest version of Android Studio.
