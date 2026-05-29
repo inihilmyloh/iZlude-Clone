@@ -19,6 +19,20 @@ class DualSpaceApp : Application() {
 
     override fun attachBaseContext(base: Context) {
         super.attachBaseContext(base)
+        instance = this
+
+        try {
+            top.niunaijun.blackbox.BlackBoxCore.get().closeCodeInit()
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+
+        try {
+            top.niunaijun.blackbox.BlackBoxCore.get().onBeforeMainApplicationAttach(this, base)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+
         try {
             top.niunaijun.blackbox.BlackBoxCore.get().doAttachBaseContext(base, object : top.niunaijun.blackbox.app.configuration.ClientConfiguration() {
                 override fun getHostPackageName(): String {
@@ -32,11 +46,16 @@ class DualSpaceApp : Application() {
         } catch (e: Exception) {
             e.printStackTrace()
         }
+
+        try {
+            top.niunaijun.blackbox.BlackBoxCore.get().onAfterMainApplicationAttach(this, base)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
     }
 
     override fun onCreate() {
         super.onCreate()
-        instance = this
         try {
             top.niunaijun.blackbox.BlackBoxCore.get().doCreate()
         } catch (e: Exception) {
